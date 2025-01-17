@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useCalendar } from "../context/CalendarProvider";
 import cn from "../utils/cn";
 
-const BASE_TD_CLASS = "w-[calc(4px*10*7/4)] whitespace-nowrap";
+const BASE_TD_CLASS = "w-[calc(100%/7)]] whitespace-nowrap";
 
 function YearViewComp({ className }: { className?: string }) {
   const [state, dispatch] = useCalendar();
@@ -41,7 +41,7 @@ function YearViewComp({ className }: { className?: string }) {
           onClick={() => dispatch({ type: "increment_decade" })}
         />
       </h1>
-      <table className="mt-3 border-collapse">
+      <table className="mt-3 w-[280px] border-collapse">
         <tbody>
           {calendar.map((row, rowIdx) => (
             <tr key={rowIdx}>

@@ -5,7 +5,7 @@ import cn from "../utils/cn";
 import { getMonthString } from "../utils/getMonthString";
 import { initCalendar } from "../utils/initCalendar";
 
-const BASE_TD_CLASS = "whitespace-nowrap w-10";
+const BASE_TD_CLASS = "whitespace-nowrap w-[calc(100%/4)]";
 const WEEKDAY_SHORT = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
 function DateViewComp({
@@ -61,7 +61,7 @@ function DateViewComp({
           onClick={() => dispatch({ type: "increment_month" })}
         />
       </h1>
-      <table className="mt-2 border-collapse">
+      <table className="mt-2 w-[280px] border-collapse">
         <thead>
           <tr>
             {WEEKDAY_SHORT.map((day) => (

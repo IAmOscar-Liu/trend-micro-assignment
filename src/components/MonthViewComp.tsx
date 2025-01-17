@@ -4,7 +4,7 @@ import { MonthType } from "../types";
 import cn from "../utils/cn";
 import { getMonthString } from "../utils/getMonthString";
 
-const BASE_TD_CLASS = "w-[calc(4px*10*7/4)] whitespace-nowrap";
+const BASE_TD_CLASS = "w-[w-[calc(100%/7)]] whitespace-nowrap";
 
 function MonthViewComp({ className }: { className?: string }) {
   const [state, dispatch] = useCalendar();
@@ -41,7 +41,7 @@ function MonthViewComp({ className }: { className?: string }) {
           onClick={() => dispatch({ type: "increment_year" })}
         />
       </h1>
-      <table className="mt-3 border-collapse">
+      <table className="mt-3 w-[280px] border-collapse">
         <tbody>
           {calendar.map((row, rowIdx) => (
             <tr key={rowIdx}>
