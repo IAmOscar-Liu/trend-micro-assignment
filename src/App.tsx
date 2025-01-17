@@ -16,7 +16,7 @@ const getButtonClass = (disabled: boolean) =>
 
 function App() {
   const [state] = useCalendar();
-  const [compType, setCompType] = useState<"calendar" | "datePicker">(
+  const [compType, setCompType] = useState<"calendar" | "date picker">(
     "calendar",
   );
 
@@ -27,16 +27,18 @@ function App() {
 
   return (
     <div>
-      <h1 className="flex items-center justify-center bg-primary px-10 py-6 text-2xl font-semibold text-white">
+      <header className="flex items-center justify-center bg-primary px-10 py-6 text-2xl font-semibold text-white">
         Calendar and Date Picker
-      </h1>
+      </header>
       <main className="flex flex-col px-6 py-4">
-        <div className="flex items-center justify-between">
-          <p className="text-xl font-semibold capitalize">{compType}</p>
-          <p className="mt-3 text-lg font-semibold text-primary">
+        <div className="flex flex-wrap items-center gap-4">
+          <h1 className="me-auto text-xl font-semibold capitalize">
+            {compType}
+          </h1>
+          <h2 className="mt-3 text-lg font-semibold text-primary">
             Selected date:{" "}
             {state.selectedDate ? formatDateString(state.selectedDate) : "null"}
-          </p>
+          </h2>
         </div>
         <div className="mt-3 flex gap-2">
           <button
@@ -46,8 +48,8 @@ function App() {
             Calendar
           </button>
           <button
-            className={getButtonClass(compType === "datePicker")}
-            onClick={() => setCompType("datePicker")}
+            className={getButtonClass(compType === "date picker")}
+            onClick={() => setCompType("date picker")}
           >
             Date Picker
           </button>

@@ -92,7 +92,7 @@ function DatePicker({
         className={cn(
           "border-gray flex h-10 w-[200px] items-center gap-2 rounded-sm border-[1px] ps-2",
           {
-            "border-none ring-2 ring-blue-500": isCalendarOpen,
+            "border-none ring-2 ring-inset ring-blue-500": isCalendarOpen,
           },
         )}
       >
@@ -160,7 +160,7 @@ function DatePicker({
           // use key to force Calendar to reset ViewType
           key={
             state.selectedDate
-              ? `{${formatDateString(state.selectedDate)},${
+              ? `${formatDateString(state.selectedDate)},${
                   isCalendarOpen ? "true" : "false"
                 }`
               : isCalendarOpen

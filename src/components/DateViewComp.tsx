@@ -38,7 +38,6 @@ function DateViewComp({
       onSelect(undefined);
       return;
     }
-
     dispatch({ type: "set_selected_date", payload: _date });
     onSelect(_date);
   };

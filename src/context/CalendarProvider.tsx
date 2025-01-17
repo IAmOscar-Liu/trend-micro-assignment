@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useReducer } from "react";
-import { ViewType, MonthType, DateType } from "../types";
 import { Constants } from "../constants";
+import { DateType, MonthType, ViewType } from "../types";
 import { isValidDate } from "../utils/isValidDate";
 
 // Define the shape of the state
@@ -134,8 +134,6 @@ const calendarStore = () => {
     if (_date.year < Constants.minYear && _date.year > Constants.maxYear)
       return "Date is out of range";
     if (!isValidDate(_date)) return "Invalid date";
-    // dispatch({ type: "set_year", payload: _date.year });
-    // dispatch({ type: "set_month", payload: _date.month });
     dispatch({ type: "reset_view_type", payload: _date });
     return "";
   };
