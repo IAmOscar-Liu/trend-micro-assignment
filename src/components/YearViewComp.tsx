@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useCalendar } from "../context/CalendarProvider";
 import cn from "../utils/cn";
 
-const BASE_TD_CLASS = "w-[calc(100%/4)]] whitespace-nowrap";
+const BASE_TD_CLASS = "w-[calc(100%/4)] whitespace-nowrap";
 
 function YearViewComp({ className }: { className?: string }) {
   const [state, dispatch] = useCalendar();
