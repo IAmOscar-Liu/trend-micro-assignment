@@ -91,7 +91,7 @@ const calendarReducer = (
         };
       return state;
     case "decrement_year":
-      if (state.year > Constants.maxYear)
+      if (state.year > Constants.minYear)
         return {
           ...state,
           year: state.year - 1,
