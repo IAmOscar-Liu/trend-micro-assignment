@@ -5,7 +5,7 @@ import cn from "../utils/cn";
 import { getMonthString } from "../utils/getMonthString";
 import { initCalendar } from "../utils/initCalendar";
 
-const BASE_TD_CLASS = "whitespace-nowrap w-[calc(100%/4)]";
+const BASE_TD_CLASS = "whitespace-nowrap w-[calc(100%/7)]";
 const WEEKDAY_SHORT = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
 function DateViewComp({

@@ -4,7 +4,7 @@ import { MonthType } from "../types";
 import cn from "../utils/cn";
 import { getMonthString } from "../utils/getMonthString";
 
-const BASE_TD_CLASS = "w-[w-[calc(100%/7)]] whitespace-nowrap";
+const BASE_TD_CLASS = "w-[w-[calc(100%/4)]] whitespace-nowrap";
 
 function MonthViewComp({ className }: { className?: string }) {
   const [state, dispatch] = useCalendar();
