@@ -13,7 +13,7 @@ function MonthViewComp({ className }: { className?: string }) {
     .map((_, row) =>
       Array(4)
         .fill(null)
-        .map((__, col) => ({ month: row * 4 + col + 1 })),
+        .map((__, col) => ({ month: (row * 4 + col + 1) as MonthType })),
     );
 
   const isThisMonth = (_month: MonthType) =>
@@ -52,18 +52,18 @@ function MonthViewComp({ className }: { className?: string }) {
                   onClick={() =>
                     dispatch({
                       type: "set_month",
-                      payload: d.month as MonthType,
+                      payload: d.month,
                     })
                   }
                 >
                   <div
                     className={cn("m-2 w-[max-content]", {
-                      "text-primary": isThisMonth(d.month as MonthType),
+                      "text-primary": isThisMonth(d.month),
                       "z-1 relative text-white before:absolute before:left-[50%] before:top-[50%] before:z-[-1] before:h-10 before:w-10 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-full before:bg-primary before:content-['']":
-                        isSelectedMonth(d.month as MonthType),
+                        isSelectedMonth(d.month),
                     })}
                   >
-                    {getMonthString(d.month as MonthType, true)}
+                    {getMonthString(d.month, true)}
                   </div>
                 </td>
               ))}

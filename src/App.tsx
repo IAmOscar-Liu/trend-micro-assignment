@@ -26,11 +26,11 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="flex h-screen flex-col">
       <header className="flex items-center justify-center bg-primary px-10 py-6 text-2xl font-semibold text-white">
         Calendar and Date Picker
       </header>
-      <main className="flex flex-col px-6 py-4">
+      <main className="flex h-0 flex-grow flex-col overflow-y-auto px-6 py-4">
         <div className="flex flex-wrap items-center gap-4">
           <h1 className="me-auto text-xl font-semibold capitalize">
             {compType}

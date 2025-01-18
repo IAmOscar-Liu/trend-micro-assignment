@@ -131,7 +131,7 @@ const calendarStore = () => {
   });
 
   const setSelectedDateManually = (_date: DateType) => {
-    if (_date.year < Constants.minYear && _date.year > Constants.maxYear)
+    if (_date.year < Constants.minYear || _date.year > Constants.maxYear)
       return "Date is out of range";
     if (!isValidDate(_date)) return "Invalid date";
     dispatch({ type: "reset_view_type", payload: _date });

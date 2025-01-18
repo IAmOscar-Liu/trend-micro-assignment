@@ -12,7 +12,7 @@ export const isValidDate = ({
 }) => {
   if (isNaN(year) || isNaN(month) || isNaN(date)) return false;
 
-  if (year < Constants.minYear && year > Constants.maxYear) return false;
+  if (year < Constants.minYear || year > Constants.maxYear) return false;
   if (month < 1 && month > 12) return false;
   if (date < 1 && date > 31) return false;
 
